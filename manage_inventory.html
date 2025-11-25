@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <title>SCIS — Manage Inventory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-page="manage_inventory">
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand"><div class="brand-badge">SC</div>Student Council Inventory System</div>
+      <nav class="nav">
+        <a href="index.html">Login</a>
+        <a href="student.html">Student</a>
+        <a href="officer.html">Officer</a>
+        <a href="inventory.html">Inventory</a>
+        <a class="active" href="manage_inventory.html">Manage Inventory</a>
+        <a href="manage_users.html">Manage Users</a>
+        <button id="themeToggle" class="theme-toggle">Toggle theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2>Inventory items</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Category</th><th>Status</th><th>Location</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="miTbody"></tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Add new item</h2>
+      <form id="addItemForm" class="row">
+        <div>
+          <label>Name</label>
+          <input class="input" type="text" required>
+        </div>
+        <div>
+          <label>Category</label>
+          <input class="input" type="text" required>
+        </div>
+        <div>
+          <label>Status</label>
+          <select class="select" required>
+            <option value="available">Available</option>
+            <option value="borrowed">Borrowed</option>
+            <option value="reserved">Reserved</option>
+            <option value="damaged">Damaged</option>
+          </select>
+        </div>
+        <div>
+          <label>Location</label>
+          <input class="input" type="text">
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label>Description</label>
+          <textarea class="textarea" rows="3"></textarea>
+        </div>
+        <div class="actions" style="grid-column: 1 / -1;">
+          <button class="btn btn-primary" type="submit">Add item</button>
+        </div>
+      </form>
+      <p class="muted">Mock only. Later: POST /items then refresh table.</p>
+    </section>
+  </main>
+
+  <footer class="footer">Management actions trigger mock alerts. Later connect to items API.</footer>
+
+  <script src="js/expose-mocks.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

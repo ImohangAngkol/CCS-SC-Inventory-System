@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <title>SCIS — Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-page="login">
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand"><div class="brand-badge">SC</div>Student Council Inventory System</div>
+      <nav class="nav">
+        <a class="active" href="index.html">Login</a>
+        <a href="student.html">Student</a>
+        <a href="officer.html">Officer</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="borrowed.html">My Borrowed</a>
+        <a href="manage_inventory.html">Manage Inventory</a>
+        <a href="manage_users.html">Manage Users</a>
+        <button id="themeToggle" class="theme-toggle">Toggle theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2>Welcome</h2>
+      <p>Login with your school email and role. No real authentication yet—this is a static mock for UI integration.</p>
+    </section>
+
+    <section class="section">
+      <h2>Login</h2>
+      <form id="loginForm" class="row">
+        <div>
+          <label>Email</label>
+          <input id="loginEmail" type="email" class="input" placeholder="you@school.edu" required>
+        </div>
+        <div>
+          <label>Role</label>
+          <select id="loginRole" class="select" required>
+            <option value="student">Student</option>
+            <option value="officer">Officer</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div class="actions" style="grid-column: 1 / -1; margin-top: 8px;">
+          <button class="btn btn-primary" type="submit">Login</button>
+          <span class="chip">Mock only — redirects based on role</span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">SCIS static frontend • Upload to GitHub; backend can plug in later via API.</footer>
+
+  <script src="js/expose-mocks.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

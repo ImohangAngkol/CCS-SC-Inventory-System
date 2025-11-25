@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <title>SCIS — Borrow Item</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body data-page="borrow">
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand"><div class="brand-badge">SC</div>Student Council Inventory System</div>
+      <nav class="nav">
+        <a href="index.html">Login</a>
+        <a href="student.html">Student</a>
+        <a href="officer.html">Officer</a>
+        <a href="inventory.html">Inventory</a>
+        <a class="active" href="borrow.html">Borrow</a>
+        <a href="borrowed.html">My Borrowed</a>
+        <a href="manage_inventory.html">Manage Inventory</a>
+        <a href="manage_users.html">Manage Users</a>
+        <button id="themeToggle" class="theme-toggle">Toggle theme</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h2>Borrow item</h2>
+      <p>Item: <strong id="borrowItemName">Select from inventory</strong></p>
+      <form id="borrowForm" class="row">
+        <div>
+          <label>Borrow date</label>
+          <input class="input" type="date" required>
+        </div>
+        <div>
+          <label>Return date</label>
+          <input class="input" type="date" required>
+        </div>
+        <div style="grid-column: 1 / -1;">
+          <label>Purpose / Notes</label>
+          <textarea class="textarea" rows="4" placeholder="Describe your use case..." required></textarea>
+        </div>
+        <div class="actions" style="grid-column: 1 / -1;">
+          <button class="btn btn-primary" type="submit">Submit request</button>
+          <a class="btn" href="inventory.html">Back to inventory</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">Mock submits and redirects. Later: POST /transactions.</footer>
+
+  <script src="js/expose-mocks.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
