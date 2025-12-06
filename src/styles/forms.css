@@ -1,5 +1,0 @@
-.form-field { margin-bottom: 0.8rem; }
-.form-field label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
-.form-error { color: var(--error); font-size: 0.85rem; margin-top: 0.3rem; }
-.required::after { content: ' *'; color: var(--error); }
-.inline { display: flex; gap: 0.75rem; }
