@@ -1,0 +1,13 @@
+[data-theme="dark"] body {
+  background: #12161d;
+  color: #c7cfdb;
+}
+
+[data-theme="dark"] .card {
+  background: #1b2029;
+  border-color: #2a313d;
+}
+
+[data-theme="dark"] a {
+  color: #7aa2ff;
+}
